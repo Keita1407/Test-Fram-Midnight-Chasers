@@ -1167,10 +1167,10 @@ autoFarmToggle.MouseButton1Click:Connect(function()
             uiElements.rewardsButton.Visible = false
         end
         toggleGradient.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(26,74,36)), ColorSequenceKeypoint.new(1, Color3.fromRGB(17,54,26)) }
-        spawn(function()
+       spawn(function()
             while autoFarmActive do
                 for _, v in pairs(workspace:GetChildren()) do
-                    if v:IsA("Model") and (v:FindFirstChild("Container") or v:Name == "PortCraneOversized") then 
+                    if v:IsA("Model") and (v:FindFirstChild("Container") or v.Name == "PortCraneOversized") then 
                         v:Destroy() 
                     end
                 end; wait(1)
