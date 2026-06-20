@@ -1202,7 +1202,7 @@ autoFarmToggle.MouseButton1Click:Connect(function()
                 stabilizeCar(car); wait(0.3)
                 for waypointIndex = 2, #WAYPOINTS do
                     if not autoFarmActive or not isPlayerSeated() then break end
-                    local baseSpeed = 460
+                    local baseSpeed = 736
                     local carSpeed = baseSpeed + (questSpeedBonus * 3)
                     smoothNavigateToCar(car, WAYPOINTS[waypointIndex], carSpeed)
                 end
